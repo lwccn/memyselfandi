@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludwig Wullner – Leadership Introduction</title>
+
+    <!-- Tailwind CSS via CDN (no build step, GitHub Pages friendly) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                background: "#FFFFFF",
+                primary: "#FFBC0D", // Selective Yellow
+                primaryForeground: "#1a1300",
+                secondary: "#DB0007", // Monza red
+                muted: "#F5F5F5",
+                border: "#E4E4E7",
+                text: "#020617",
+                subtle: "#4B5563",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "sans-serif",
+              ],
+            },
+            boxShadow: {
+              "soft-card":
+                "0 18px 40px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Minimal shadcn-style primitives & animation helpers -->
+    <style>
+      :root {
+        --radius-lg: 1rem;
+        --radius-md: 0.75rem;
+      }
+
+      body {
+        background-color: #ffffff;
+      }
+
+      .container-page {
+        max-width: 1120px;
+      }
+
+      .card-surface {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        background: radial-gradient(
+            circle at top left,
+            rgba(255, 188, 13, 0.06),
+            transparent 55%
+          ),
+          #ffffff;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      }
+
+      .card-muted {
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        background: #fafafa;
+      }
+
+      .pill {
+        border-radius: 999px;
+      }
+
+      .underline-soft {
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+      }
+
+      .section-rail {
+        pointer-events: none;
+      }
+
+      .section-rail button {
+        pointer-events: auto;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .animate-in,
+        .animate-stagger > * {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-in {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      .animate-in[data-in-view="true"] {
+        animation: fadeUp 0.4s ease-out forwards;
+      }
+
+      .animate-stagger > * {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      .animate-stagger[data-in-view="true"] > * {
+        animation: fadeUp 0.4s ease-out forwards;
+      }
+
+      .animate-stagger[data-in-view="true"] > *:nth-child(1) {
+        animation-delay: 0.02s;
+      }
+
+      .animate-stagger[data-in-view="true"] > *:nth-child(2) {
+        animation-delay: 0.08s;
+      }
+
+      .animate-stagger[data-in-view="true"] > *:nth-child(3) {
+        animation-delay: 0.14s;
+      }
+
+      .animate-stagger[data-in-view="true"] > *:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+
+      @media (min-width: 1024px) {
+        .prose-lg {
+          font-size: 1.05rem;
+          line-height: 1.8;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-brand-background text-brand-text antialiased">
+    <div class="flex min-h-screen flex-col">
+      <header
+        class="sticky top-0 z-20 border-b border-slate-200/70 bg-white/85 backdrop-blur"
+      >
+        <div
+          class="container-page mx-auto flex h-16 w-full items-center justify-between px-4 sm:px-6 lg:px-8"
+        >
+          <a
+            href="#hero"
+            class="flex items-baseline gap-1.5 text-sm font-semibold tracking-tight text-slate-900"
+          >
+            <span
+              class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-primary/90 text-xs font-semibold text-brand-primaryForeground shadow-sm"
+            >
+              LW
+            </span>
+            <span
+              class="hidden text-xs font-medium uppercase tracking-[0.18em] text-slate-500/90 sm:inline"
+            >
+              Leadership Profile
+            </span>
+          </a>
+
+          <nav
+            aria-label="Section navigation"
+            class="hidden items-center gap-6 text-xs font-medium text-slate-600 md:flex"
+          >
+            <a href="#who-i-am" class="transition-colors hover:text-slate-900"
+              >Who I Am</a
+            >
+            <a href="#how-i-lead" class="transition-colors hover:text-slate-900"
+              >How I Lead</a
+            >
+            <a href="#how-we-work" class="transition-colors hover:text-slate-900"
+              >How We Work</a
+            >
+            <a href="#partnership" class="transition-colors hover:text-slate-900"
+              >Partnership</a
+            >
+            <a href="#beyond-work" class="transition-colors hover:text-slate-900"
+              >Beyond Work</a
+            >
+          </nav>
+
+          <a
+            href="#how-we-work"
+            class="pill hidden items-center gap-1.5 bg-slate-900 px-3.5 py-1.5 text-xs font-medium text-white shadow-sm transition hover:bg-slate-800 sm:inline-flex"
+          >
+            How to work with me
+          </a>
+        </div>
+      </header>
+
+      <!-- Section progress rail (desktop) -->
+      <aside
+        class="section-rail fixed right-6 top-1/2 hidden -translate-y-1/2 lg:block"
+        aria-hidden="true"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <button
+            data-section="hero"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+          <button
+            data-section="who-i-am"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+          <button
+            data-section="how-i-lead"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+          <button
+            data-section="how-we-work"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+          <button
+            data-section="partnership"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+          <button
+            data-section="beyond-work"
+            class="group h-3 w-3 rounded-full border border-slate-300 bg-white transition hover:border-amber-400"
+          >
+            <span
+              class="block h-full w-full scale-0 rounded-full bg-amber-400 transition-transform group-[.is-active]:scale-100"
+            ></span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="flex-1" id="main-content">
+        <!-- Hero -->
+        <section
+          id="hero"
+          class="border-b border-slate-200/70 bg-gradient-to-b from-white via-white to-amber-50/40"
+        >
+          <div
+            class="container-page mx-auto flex min-h-[70vh] w-full items-center px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
+          >
+            <div
+              class="grid w-full gap-10 lg:grid-cols-[minmax(0,3fr),minmax(0,2.4fr)] lg:items-center"
+            >
+              <div class="animate-in" data-animate>
+                <p
+                  class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-amber-500"
+                >
+                  Leadership Introduction
+                </p>
+                <h1
+                  class="mb-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.8rem] lg:leading-tight"
+                >
+                  Ludwig Wullner
+                </h1>
+                <p
+                  class="mb-4 max-w-xl text-sm font-medium text-slate-700 sm:text-base"
+                >
+                  Senior Department Head – Software Deployment &amp;
+                  Transformation, McDonald&apos;s
+                </p>
+                <p
+                  class="mb-8 max-w-xl text-sm text-slate-600 sm:text-[0.94rem] lg:prose-lg"
+                >
+                  I lead global technology deployment so ambitious change lands
+                  cleanly in markets — especially across LIOM and the US —
+                  connecting strategy, architecture, and delivery so it works in
+                  real restaurants, for crew and guests.
+                </p>
+
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <a
+                    href="#who-i-am"
+                    class="pill inline-flex items-center justify-center bg-brand-primary px-6 py-2.5 text-xs font-semibold text-brand-primaryForeground shadow-soft-card transition hover:bg-amber-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                  >
+                    Start with who I am
+                  </a>
+                  <div class="flex flex-wrap gap-2 text-[0.7rem]">
+                    <span
+                      class="pill border border-amber-200 bg-amber-50 px-3 py-1 font-medium text-amber-800"
+                    >
+                      Global tech delivery
+                    </span>
+                    <span
+                      class="pill border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700"
+                    >
+                      Market readiness
+                    </span>
+                    <span
+                      class="pill border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700"
+                    >
+                      Cross-functional leadership
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative animate-in" data-animate>
+                <div
+                  class="card-surface relative overflow-hidden p-6 sm:p-7 lg:p-8"
+                >
+                  <div
+                    class="mb-6 flex items-center justify-between gap-4"
+                  >
+                    <div>
+                      <p
+                        class="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-slate-500"
+                      >
+                        At a glance
+                      </p>
+                      <p class="mt-1 text-sm font-semibold text-slate-900">
+                        How I show up as a leader
+                      </p>
+                    </div>
+                    <span
+                      class="pill inline-flex items-center gap-1 border border-amber-200 bg-amber-50 px-3 py-1 text-[0.7rem] font-semibold text-amber-800"
+                    >
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                      ></span>
+                      Global scope
+                    </span>
+                  </div>
+
+                  <dl
+                    class="grid gap-4 text-[0.72rem] text-slate-600 sm:grid-cols-2"
+                  >
+                    <div>
+                      <dt
+                        class="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-slate-500"
+                      >
+                        Experience
+                      </dt>
+                      <dd class="text-sm font-semibold text-slate-900">
+                        12+ years in tech &amp; leadership
+                      </dd>
+                      <p class="mt-1 text-[0.7rem] text-slate-500">
+                        From technical product management to global deployment and
+                        market readiness.
+                      </p>
+                    </div>
+                    <div>
+                      <dt
+                        class="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-slate-500"
+                      >
+                        Style
+                      </dt>
+                      <dd class="text-sm font-semibold text-slate-900">
+                        Strategic builder, calm operator
+                      </dd>
+                      <p class="mt-1 text-[0.7rem] text-slate-500">
+                        Turns ambiguity into clear, executable plans that teams
+                        can own.
+                      </p>
+                    </div>
+                    <div>
+                      <dt
+                        class="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-slate-500"
+                      >
+                        Focus
+                      </dt>
+                      <dd class="text-sm font-semibold text-slate-900">
+                        Making change land in markets
+                      </dd>
+                      <p class="mt-1 text-[0.7rem] text-slate-500">
+                        Balancing central standards with local realities so
+                        change is sustainable.
+                      </p>
+                    </div>
+                    <div>
+                      <dt
+                        class="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-slate-500"
+                      >
+                        What matters most
+                      </dt>
+                      <dd class="text-sm font-semibold text-slate-900">
+                        Quality, resilience &amp; learning
+                      </dd>
+                      <p class="mt-1 text-[0.7rem] text-slate-500">
+                        Not just shipping once, but being able to ship
+                        reliably.
+                      </p>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Executive summary strip -->
+        <section
+          aria-label="Executive summary"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-6 sm:px-6 lg:px-8"
+          >
+            <div
+              class="card-muted animate-stagger flex flex-col gap-4 rounded-xl border bg-slate-50/60 px-4 py-4 text-[0.8rem] text-slate-700 sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:py-4"
+              data-animate
+            >
+              <div class="max-w-xs">
+                <p
+                  class="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-slate-500"
+                >
+                  In 15 seconds
+                </p>
+                <p class="mt-1 text-sm font-semibold text-slate-900">
+                  How to think about working with me.
+                </p>
+              </div>
+              <div class="flex flex-1 flex-wrap gap-2">
+                <span
+                  class="pill border border-amber-200 bg-amber-50 px-3 py-1 font-medium text-amber-800"
+                >
+                  Strategy translated into execution
+                </span>
+                <span
+                  class="pill border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700"
+                >
+                  Calm, direct communication
+                </span>
+                <span
+                  class="pill border border-slate-200 bg-white px-3 py-1 font-medium text-slate-700"
+                >
+                  High trust, high ownership
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Who I am -->
+        <section
+          id="who-i-am"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+          >
+            <div class="max-w-3xl animate-in" data-animate>
+              <p
+                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
+              >
+                Context
+              </p>
+              <h2
+                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+              >
+                Who I am as a leader
+              </h2>
+            </div>
+
+            <div
+              class="grid gap-10 lg:grid-cols-[minmax(0,3fr),minmax(0,2.3fr)] lg:items-start"
+            >
+              <div class="max-w-2xl animate-in" data-animate>
+                <p class="mb-4 text-sm text-slate-700 lg:prose-lg">
+                  I lead global technology delivery at scale, with a focus on
+                  making complex software change land cleanly in markets. My
+                  work sits at the intersection of product, architecture,
+                  deployment, and market readiness — ensuring that what we
+                  design centrally actually works for restaurants, crew, and
+                  guests.
+                </p>
+                <ul class="space-y-3 text-sm text-slate-700">
+                  <li>
+                    Built my career across
+                    <span class="font-semibold">
+                      &nbsp;product, architecture, and deployment
+                    </span>
+                    — from mobile app frontend and backend to global
+                    deployment.
+                  </li>
+                  <li>
+                    Known for
+                    <span class="font-semibold">
+                      &nbsp;strategic problem-solving
+                    </span>
+                    &nbsp;and
+                    <span class="font-semibold">
+                      &nbsp;turning ambiguity into clear plans
+                    </span>
+                    &nbsp;that teams can rally around.
+                  </li>
+                  <li>
+                    Comfortable navigating
+                    <span class="font-semibold">
+                      &nbsp;complex, global environments
+                    </span>
+                    &nbsp;and balancing standards with local realities.
+                  </li>
+                  <li>
+                    I care deeply about
+                    <span class="font-semibold">
+                      &nbsp;delivery quality, resilience, and learning
+                    </span>
+                    — not just &quot;go-live&quot; moments.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-4 animate-in" data-animate>
+                <div class="card-muted p-5 sm:p-6">
+                  <h3 class="mb-3 text-sm font-semibold text-slate-900">
+                    How I hope this page is used
+                  </h3>
+                  <p class="mb-2 text-[0.8rem] text-slate-700">
+                    This is a practical guide, not a CV. It&apos;s meant to help
+                    you understand how I think, how I work, and how we can be
+                    effective together quickly.
+                  </p>
+                  <p class="text-[0.78rem] text-slate-500">
+                    Consider it a starting point for conversation, not a
+                    finished picture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How I lead -->
+        <section
+          id="how-i-lead"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+          >
+            <div class="max-w-3xl animate-in" data-animate>
+              <p
+                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
+              >
+                Leadership approach
+              </p>
+              <h2
+                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+              >
+                How I lead &amp; what you can expect
+              </h2>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3 animate-stagger" data-animate>
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Strategy into execution
+                </h3>
+                <ul class="space-y-2 text-[0.8rem] text-slate-700">
+                  <li>
+                    Balance long-term architecture with clear near-term business
+                    impact.
+                  </li>
+                  <li>
+                    Use data and scenario thinking to make decisions under
+                    pressure.
+                  </li>
+                  <li>
+                    Break complex problems into sharp, achievable milestones.
+                  </li>
+                </ul>
+              </article>
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Safety &amp; learning culture
+                </h3>
+                <ul class="space-y-2 text-[0.8rem] text-slate-700">
+                  <li>
+                    Encourage experimentation with a &quot;fail fast, recover,
+                    and learn&quot; mindset.
+                  </li>
+                  <li>
+                    Prefer blameless reviews that focus on systems, not
+                    individuals.
+                  </li>
+                  <li>
+                    Surface issues early so we can course-correct while options
+                    are still open.
+                  </li>
+                </ul>
+              </article>
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Clear decisions &amp; communication
+                </h3>
+                <ul class="space-y-2 text-[0.8rem] text-slate-700">
+                  <li>
+                    Communicate with a straightforward, transparent style — no
+                    drama, no hidden agendas.
+                  </li>
+                  <li>
+                    Translate technical topics into clear trade-offs and stories
+                    leaders can act on.
+                  </li>
+                  <li>
+                    Prefer clear ownership, decision rights, and definitions of
+                    &quot;done&quot;.
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- How we work -->
+        <section
+          id="how-we-work"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+          >
+            <div class="max-w-3xl animate-in" data-animate>
+              <p
+                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
+              >
+                Working together
+              </p>
+              <h2
+                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+              >
+                How we work best together
+              </h2>
+              <p class="mb-8 text-sm text-slate-700 lg:prose-lg">
+                If we&apos;re working closely together, here&apos;s what you can
+                expect from me — and what I&apos;ll expect from you — so we can
+                move fast with trust.
+              </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2 animate-stagger" data-animate>
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
+                  Align early on &quot;what good looks like&quot;
+                </h3>
+                <p class="text-[0.8rem] text-slate-700">
+                  I move fastest when we are clear on
+                  <span class="font-semibold">
+                    &nbsp;goals, constraints, and success measures
+                  </span>
+                  . If we&apos;re misaligned on those, I will slow us down to
+                  fix it.
+                </p>
+              </article>
+
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
+                  Bring data and real voices
+                </h3>
+                <p class="text-[0.8rem] text-slate-700">
+                  I value
+                  <span class="font-semibold">
+                    &nbsp;data, customer impact, and market perspective
+                  </span>
+                  &nbsp;over opinions. Challenge my thinking, especially when
+                  you see different risks or opportunities.
+                </p>
+              </article>
+
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
+                  Ownership and autonomy
+                </h3>
+                <p class="text-[0.8rem] text-slate-700">
+                  I want teams to
+                  <span class="font-semibold">
+                    &nbsp;own problems end-to-end
+                  </span>
+                  . I will be clear on direction and decision rights, then give
+                  room for you and your teams to solve.
+                </p>
+              </article>
+
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
+                  Real-time, two-way feedback
+                </h3>
+                <p class="text-[0.8rem] text-slate-700">
+                  Please give
+                  <span class="font-semibold">
+                    &nbsp;direct, timely feedback
+                  </span>
+                  — for example, if I&apos;m moving too fast, missing a
+                  stakeholder, or something doesn&apos;t land well with your
+                  teams. I will do the same in return.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Partnership -->
+        <section
+          id="partnership"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+          >
+            <div class="max-w-3xl animate-in" data-animate>
+              <p
+                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
+              >
+                Where partnership matters
+              </p>
+              <h2
+                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+              >
+                Where I need your partnership
+              </h2>
+              <p class="mb-8 text-sm text-slate-700 lg:prose-lg">
+                I do my best work when we&apos;re structured, data-informed, and
+                focused on outcomes. These are the spaces where strong partners
+                around me make the biggest difference.
+              </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3 animate-stagger" data-animate>
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Slow, ownerless decisions
+                </h3>
+                <p class="mb-3 text-[0.8rem] text-slate-700">
+                  Long, circular discussions without clear owners, timelines, or
+                  criteria make it harder for me to be effective.
+                </p>
+                <p class="text-[0.75rem] text-slate-500">
+                  <span class="font-semibold text-slate-700">
+                    How you can help:
+                  </span>
+                  &nbsp;Propose an owner, a decision date, and a small set of
+                  options with trade-offs.
+                </p>
+              </article>
+
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Debates without data
+                </h3>
+                <p class="mb-3 text-[0.8rem] text-slate-700">
+                  Opinion-heavy debates without data, guest impact, or real
+                  stakeholder voices are less energizing for me.
+                </p>
+                <p class="text-[0.75rem] text-slate-500">
+                  <span class="font-semibold text-slate-700">
+                    How you can help:
+                  </span>
+                  &nbsp;Pause to gather the right input, then come back with a
+                  sharper, evidence-based conversation.
+                </p>
+              </article>
+
+              <article class="card-muted p-5 sm:p-6">
+                <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                  Work that is only political
+                </h3>
+                <p class="mb-3 text-[0.8rem] text-slate-700">
+                  Navigating politics is part of the job, but work that feels
+                  only political and not outcome-focused tends to drain me.
+                </p>
+                <p class="text-[0.75rem] text-slate-500">
+                  <span class="font-semibold text-slate-700">
+                    How you can help:
+                  </span>
+                  &nbsp;Partner on stakeholder mapping, coalition-building, and
+                  narratives that connect to real impact.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="mt-8 max-w-3xl rounded-lg border border-dashed border-slate-300/80 bg-slate-50 px-4 py-4 sm:px-5 sm:py-4 animate-in"
+              data-animate
+            >
+              <p class="text-[0.8rem] text-slate-700">
+                In all of these spaces, I work best with
+                <span class="font-semibold">
+                  &nbsp;peers and my leadership team
+                </span>
+                &nbsp;who complement my focus on
+                strategy, delivery, and product/technology depth so we cover the
+                whole field together.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Beyond work -->
+        <section
+          id="beyond-work"
+          class="border-b border-slate-200/70 bg-white"
+        >
+          <div
+            class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+          >
+            <div class="max-w-3xl animate-in" data-animate>
+              <p
+                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
+              >
+                Outside work
+              </p>
+              <h2
+                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+              >
+                A bit about me beyond work
+              </h2>
+              <p class="mb-8 text-sm text-slate-700 lg:prose-lg">
+                How I spend time outside the office shapes how I show up at
+                work: how I recharge, how I learn, and how I connect with
+                people.
+              </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2 animate-stagger" data-animate>
+              <div class="space-y-4">
+                <article class="card-muted p-5 sm:p-6">
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
+                    Training &amp; coaching
+                  </h3>
+                  <p class="text-[0.8rem] text-slate-700">
+                    I go to the gym regularly and have a
+                    <span class="font-semibold">
+                      &nbsp;personal trainer and nutritionist background
+                    </span>
+                    . I enjoy structured progress — whether it&apos;s in the gym
+                    or in how teams grow.
+                  </p>
+                </article>
+                <article class="card-muted p-5 sm:p-6">
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
+                    Food &amp; cooking
+                  </h3>
+                  <p class="text-[0.8rem] text-slate-700">
+                    I&apos;m a
+                    <span class="font-semibold">
+                      &nbsp;foodie and home cook
+                    </span>
+                    , often experimenting in the kitchen. For me, food is both a
+                    creative outlet and a way to connect with people and
+                    cultures.
+                  </p>
+                </article>
+              </div>
+
+              <div class="space-y-4">
+                <article class="card-muted p-5 sm:p-6">
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
+                    Travel
+                  </h3>
+                  <p class="text-[0.8rem] text-slate-700">
+                    I love
+                    <span class="font-semibold">
+                      &nbsp;long-distance travel
+                    </span>
+                    , especially across
+                    <span class="font-semibold">
+                      &nbsp;Southeast Asia
+                    </span>
+                    . New places, food, and conversations help me reset
+                    perspective and bring back fresh ideas.
+                  </p>
+                </article>
+                <article class="card-muted p-5 sm:p-6">
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
+                    Building with AI
+                  </h3>
+                  <p class="text-[0.8rem] text-slate-700">
+                    I used to be heavily into gaming — these days my
+                    <span class="font-semibold">
+                      &nbsp;creative outlet is building new applications with AI
+                    </span>
+                    . It keeps me close to technology while experimenting with
+                    new ways of working.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div
+              class="mt-10 rounded-xl border border-slate-200 bg-slate-50 px-5 py-5 sm:px-6 sm:py-6 animate-in"
+              data-animate
+            >
+              <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                What I&apos;m looking forward to
+              </h3>
+              <p class="text-[0.8rem] text-slate-700 lg:prose-lg">
+                Working with this leadership team to build an environment where
+                <span class="font-semibold">
+                  &nbsp;complex change feels manageable
+                </span>
+                , our teams feel
+                <span class="font-semibold">
+                  &nbsp;trusted and supported
+                </span>
+                , and the outcomes are felt
+                <span class="font-semibold">
+                  &nbsp;in restaurants, not just in slideware
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="bg-white pb-10 pt-6 text-[0.72rem] text-slate-500"
+        aria-label="Page footer"
+      >
+        <div
+          class="container-page mx-auto flex w-full flex-col items-start justify-between gap-3 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8"
+        >
+          <p>
+            Ludwig Wullner &middot; Leadership introduction for
+            McDonald&apos;s colleagues and partners.
+          </p>
+          <p class="text-[0.7rem]">
+            Color palette inspired by McDonald&apos;s: a touch of
+            <span class="font-semibold text-amber-500">golden</span>
+            and a small dip of
+            <span class="font-semibold text-brand-secondary">red</span>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const supportsIntersectionObserver =
+          "IntersectionObserver" in window &&
+          "IntersectionObserverEntry" in window;
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        if (supportsIntersectionObserver && !prefersReducedMotion) {
+          const animated = document.querySelectorAll("[data-animate]");
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.setAttribute("data-in-view", "true");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.15 }
+          );
+
+          animated.forEach((el) => observer.observe(el));
+        } else {
+          document
+            .querySelectorAll("[data-animate]")
+            .forEach((el) => el.setAttribute("data-in-view", "true"));
+        }
+
+        // Section rail syncing
+        const sections = [
+          "hero",
+          "who-i-am",
+          "how-i-lead",
+          "how-we-work",
+          "partnership",
+          "beyond-work",
+        ];
+        const railButtons = Array.from(
+          document.querySelectorAll(".section-rail button[data-section]")
+        );
+
+        railButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-section");
+            const target = document.getElementById(id);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+
+        if (supportsIntersectionObserver) {
+          const sectionObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const id = entry.target.id;
+                  railButtons.forEach((btn) => {
+                    btn.classList.toggle(
+                      "is-active",
+                      btn.getAttribute("data-section") === id
+                    );
+                  });
+                }
+              });
+            },
+            { threshold: 0.45 }
+          );
+
+          sections.forEach((id) => {
+            const el = document.getElementById(id);
+            if (el) sectionObserver.observe(el);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
