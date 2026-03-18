@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ludwig Wullner – Leadership Introduction</title>
+    <title>Ludwig Wullner – Introduction</title>
 
     <!-- Tailwind CSS via CDN (no build step, GitHub Pages friendly) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -66,12 +66,25 @@
           ),
           #ffffff;
         box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card-surface:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 48px rgba(15, 23, 42, 0.1);
       }
 
       .card-muted {
         border-radius: var(--radius-md);
         border: 1px solid rgba(148, 163, 184, 0.2);
         background: #fafafa;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .card-muted:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        border-color: rgba(148, 163, 184, 0.35);
       }
 
       .pill {
@@ -81,6 +94,16 @@
       .underline-soft {
         text-decoration-thickness: 2px;
         text-underline-offset: 4px;
+      }
+
+      .section-accent::before {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 3px;
+        background: linear-gradient(90deg, #FFBC0D, #FCD34D);
+        border-radius: 2px;
+        margin-bottom: 1.5rem;
       }
 
       .section-rail {
@@ -183,7 +206,7 @@
             <span
               class="hidden text-xs font-medium uppercase tracking-[0.18em] text-slate-500/90 sm:inline"
             >
-              Leadership Profile
+              Profile
             </span>
           </a>
 
@@ -290,7 +313,7 @@
                 <p
                   class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-amber-500"
                 >
-                  Leadership Introduction
+                  Introduction
                 </p>
                 <h1
                   class="mb-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.8rem] lg:leading-tight"
@@ -300,13 +323,13 @@
                 <p
                   class="mb-4 max-w-xl text-sm font-medium text-slate-700 sm:text-base"
                 >
-                  Senior Department Head – Deployment &amp; Market Readiness, McDonald&apos;s
+                  Senior Department Head – Deployment, McDonald&apos;s
                 </p>
                 <p
                   class="mb-8 max-w-xl text-sm text-slate-600 sm:text-[0.94rem] lg:prose-lg"
                 >
                   I lead global technology deployment so ambitious change lands
-                  cleanly in markets — especially across LIOM and the US —
+                  cleanly in markets — especially across IOM and the US —
                   connecting strategy, architecture, and delivery so it works in
                   real restaurants, for crew and guests.
                 </p>
@@ -339,6 +362,16 @@
               </div>
 
               <div class="relative animate-in" data-animate>
+                <!-- Decorative background pattern -->
+                <div class="absolute -right-8 -top-8 h-32 w-32 opacity-[0.08] lg:h-40 lg:w-40">
+                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#FFBC0D" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="30" stroke="#FFBC0D" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="15" fill="#FFBC0D"/>
+                    <line x1="5" y1="50" x2="95" y2="50" stroke="#FFBC0D" stroke-width="1.5"/>
+                    <line x1="50" y1="5" x2="50" y2="95" stroke="#FFBC0D" stroke-width="1.5"/>
+                  </svg>
+                </div>
                 <div
                   class="card-surface relative overflow-hidden p-6 sm:p-7 lg:p-8"
                 >
@@ -489,7 +522,7 @@
                 Context
               </p>
               <h2
-                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+                class="mb-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]"
               >
                 Who I am as a leader
               </h2>
@@ -499,64 +532,57 @@
               class="grid gap-10 lg:grid-cols-[minmax(0,3fr),minmax(0,2.3fr)] lg:items-start"
             >
               <div class="max-w-2xl animate-in" data-animate>
-                <p class="mb-4 text-sm text-slate-700 lg:prose-lg">
-                  I lead global technology delivery at scale, with a focus on
-                  making complex software change land cleanly in markets. My
-                  work sits at the intersection of product, architecture,
-                  deployment, and market readiness — ensuring that what we
-                  design centrally actually works for restaurants, crew, and
-                  guests.
+                <p class="mb-6 text-sm text-slate-700 lg:prose-lg">
+                  I lead global technology delivery at scale — ensuring what we design centrally works for restaurants, crew, and guests.
                 </p>
-                <ul class="space-y-3 text-sm text-slate-700">
-                  <li>
-                    Built my career across
-                    <span class="font-semibold">
-                      &nbsp;product, architecture, and deployment
-                    </span>
-                    — from mobile app frontend and backend to global
-                    deployment.
-                  </li>
-                  <li>
-                    Known for
-                    <span class="font-semibold">
-                      &nbsp;strategic problem-solving
-                    </span>
-                    &nbsp;and
-                    <span class="font-semibold">
-                      &nbsp;turning ambiguity into clear plans
-                    </span>
-                    &nbsp;that teams can rally around.
-                  </li>
-                  <li>
-                    Comfortable navigating
-                    <span class="font-semibold">
-                      &nbsp;complex, global environments
-                    </span>
-                    &nbsp;and balancing standards with local realities.
-                  </li>
-                  <li>
-                    I care deeply about
-                    <span class="font-semibold">
-                      &nbsp;delivery quality, resilience, and learning
-                    </span>
-                    — not just &quot;go-live&quot; moments.
-                  </li>
-                </ul>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-lg border border-slate-200/80 bg-white p-4">
+                    <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-600">Background</p>
+                    <p class="text-sm text-slate-700">Product, architecture, and deployment — deployment on global scale.</p>
+                  </div>
+                  <div class="rounded-lg border border-slate-200/80 bg-white p-4">
+                    <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-600">Strength</p>
+                    <p class="text-sm text-slate-700">Turning ambiguity into clear, executable plans.</p>
+                  </div>
+                  <div class="rounded-lg border border-slate-200/80 bg-white p-4">
+                    <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-600">Environment</p>
+                    <p class="text-sm text-slate-700">Complex global settings — balancing standards with local realities.</p>
+                  </div>
+                  <div class="rounded-lg border border-slate-200/80 bg-white p-4">
+                    <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-600">Priority</p>
+                    <p class="text-sm text-slate-700">Quality, resilience, and learning — not just "go-live" moments.</p>
+                  </div>
+                </div>
               </div>
 
               <div class="space-y-4 animate-in" data-animate>
-                <div class="card-muted p-5 sm:p-6">
-                  <h3 class="mb-3 text-sm font-semibold text-slate-900">
-                    How I hope this page is used
+                <!-- Abstract interconnected systems illustration -->
+                <div class="card-muted relative overflow-hidden p-5 sm:p-6">
+                  <div class="absolute -right-4 -top-4 h-24 w-24 opacity-10">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="20" cy="20" r="8" fill="#FFBC0D"/>
+                      <circle cx="60" cy="20" r="8" fill="#FFBC0D"/>
+                      <circle cx="40" cy="50" r="8" fill="#FFBC0D"/>
+                      <circle cx="20" cy="70" r="5" fill="#FFBC0D"/>
+                      <circle cx="60" cy="70" r="5" fill="#FFBC0D"/>
+                      <line x1="20" y1="20" x2="60" y2="20" stroke="#FFBC0D" stroke-width="2"/>
+                      <line x1="20" y1="20" x2="40" y2="50" stroke="#FFBC0D" stroke-width="2"/>
+                      <line x1="60" y1="20" x2="40" y2="50" stroke="#FFBC0D" stroke-width="2"/>
+                      <line x1="40" y1="50" x2="20" y2="70" stroke="#FFBC0D" stroke-width="1.5"/>
+                      <line x1="40" y1="50" x2="60" y2="70" stroke="#FFBC0D" stroke-width="1.5"/>
+                    </svg>
+                  </div>
+                  <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                  </div>
+                  <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                    How to use this page
                   </h3>
-                  <p class="mb-2 text-[0.8rem] text-slate-700">
-                    This is a practical guide, not a CV. It&apos;s meant to help
-                    you understand how I think, how I work, and how we can be
-                    effective together quickly.
+                  <p class="text-[0.8rem] text-slate-700">
+                    A practical guide to how I think and work — meant to accelerate our partnership.
                   </p>
-                  <p class="text-[0.78rem] text-slate-500">
-                    Consider it a starting point for conversation, not a
-                    finished picture.
+                  <p class="mt-2 text-[0.75rem] text-slate-500">
+                    A starting point for conversation, not a finished picture.
                   </p>
                 </div>
               </div>
@@ -567,19 +593,19 @@
         <!-- How I lead -->
         <section
           id="how-i-lead"
-          class="border-b border-slate-200/70 bg-white"
+          class="border-b border-slate-200/70 bg-gradient-to-b from-slate-50/50 to-white"
         >
           <div
             class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
           >
-            <div class="max-w-3xl animate-in" data-animate>
+            <div class="max-w-3xl section-accent animate-in" data-animate>
               <p
                 class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
               >
                 Leadership approach
               </p>
               <h2
-                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+                class="mb-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]"
               >
                 How I lead &amp; what you can expect
               </h2>
@@ -587,59 +613,39 @@
 
             <div class="grid gap-6 md:grid-cols-3 animate-stagger" data-animate>
               <article class="card-muted p-5 sm:p-6">
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
                 <h3 class="mb-2 text-sm font-semibold text-slate-900">
                   Strategy into execution
                 </h3>
-                <ul class="space-y-2 text-[0.8rem] text-slate-700">
-                  <li>
-                    Balance long-term architecture with clear near-term business
-                    impact.
-                  </li>
-                  <li>
-                    Use data and scenario thinking to make decisions under
-                    pressure.
-                  </li>
-                  <li>
-                    Break complex problems into sharp, achievable milestones.
-                  </li>
+                <ul class="space-y-1.5 text-[0.8rem] text-slate-700">
+                  <li>Balance long-term architecture with near-term impact.</li>
+                  <li>Break complex problems into achievable milestones.</li>
                 </ul>
               </article>
               <article class="card-muted p-5 sm:p-6">
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                </div>
                 <h3 class="mb-2 text-sm font-semibold text-slate-900">
                   Safety &amp; learning culture
                 </h3>
-                <ul class="space-y-2 text-[0.8rem] text-slate-700">
-                  <li>
-                    Encourage experimentation with a &quot;fail fast, recover,
-                    and learn&quot; mindset.
-                  </li>
-                  <li>
-                    Prefer blameless reviews that focus on systems, not
-                    individuals.
-                  </li>
-                  <li>
-                    Surface issues early so we can course-correct while options
-                    are still open.
-                  </li>
+                <ul class="space-y-1.5 text-[0.8rem] text-slate-700">
+                  <li>Fail fast, recover, learn — blameless reviews.</li>
+                  <li>Surface issues early while options are still open.</li>
                 </ul>
               </article>
               <article class="card-muted p-5 sm:p-6">
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                </div>
                 <h3 class="mb-2 text-sm font-semibold text-slate-900">
                   Clear decisions &amp; communication
                 </h3>
-                <ul class="space-y-2 text-[0.8rem] text-slate-700">
-                  <li>
-                    Communicate with a straightforward, transparent style — no
-                    drama, no hidden agendas.
-                  </li>
-                  <li>
-                    Translate technical topics into clear trade-offs and stories
-                    leaders can act on.
-                  </li>
-                  <li>
-                    Prefer clear ownership, decision rights, and definitions of
-                    &quot;done&quot;.
-                  </li>
+                <ul class="space-y-1.5 text-[0.8rem] text-slate-700">
+                  <li>Straightforward style — no drama, no hidden agendas.</li>
+                  <li>Clear ownership, decision rights, and "done" criteria.</li>
                 </ul>
               </article>
             </div>
@@ -654,14 +660,14 @@
           <div
             class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
           >
-            <div class="max-w-3xl animate-in" data-animate>
+            <div class="max-w-3xl section-accent animate-in" data-animate>
               <p
                 class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
               >
                 Working together
               </p>
               <h2
-                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+                class="mb-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]"
               >
                 How we work best together
               </h2>
@@ -673,326 +679,255 @@
             </div>
 
             <div class="grid gap-6 md:grid-cols-2 animate-stagger" data-animate>
-              <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
-                  Align early on &quot;what good looks like&quot;
-                </h3>
-                <p class="text-[0.8rem] text-slate-700">
-                  I move fastest when we are clear on
-                  <span class="font-semibold">
-                    &nbsp;goals, constraints, and success measures
-                  </span>
-                  . If we&apos;re misaligned on those, I will slow us down to
-                  fix it.
-                </p>
+              <article class="card-muted p-5 sm:p-6 flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-bold text-amber-700">01</div>
+                <div>
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">Align on "what good looks like"</h3>
+                  <p class="text-[0.8rem] text-slate-700">Clear on <span class="font-semibold">goals, constraints, success measures</span>. Misaligned? I'll slow us down to fix it.</p>
+                </div>
               </article>
 
-              <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
-                  Bring data and real voices
-                </h3>
-                <p class="text-[0.8rem] text-slate-700">
-                  I value
-                  <span class="font-semibold">
-                    &nbsp;data, customer impact, and market perspective
-                  </span>
-                  &nbsp;over opinions. Challenge my thinking, especially when
-                  you see different risks or opportunities.
-                </p>
+              <article class="card-muted p-5 sm:p-6 flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-bold text-amber-700">02</div>
+                <div>
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">Bring data and real voices</h3>
+                  <p class="text-[0.8rem] text-slate-700"><span class="font-semibold">Data &gt; opinions</span>. Challenge my thinking when you see different risks or opportunities.</p>
+                </div>
               </article>
 
-              <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
-                  Ownership and autonomy
-                </h3>
-                <p class="text-[0.8rem] text-slate-700">
-                  I want teams to
-                  <span class="font-semibold">
-                    &nbsp;own problems end-to-end
-                  </span>
-                  . I will be clear on direction and decision rights, then give
-                  room for you and your teams to solve.
-                </p>
+              <article class="card-muted p-5 sm:p-6 flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-bold text-amber-700">03</div>
+                <div>
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">Ownership and autonomy</h3>
+                  <p class="text-[0.8rem] text-slate-700">Teams <span class="font-semibold">own problems end-to-end</span>. Clear direction, then room to solve.</p>
+                </div>
               </article>
 
-              <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">
-                  Real-time, two-way feedback
-                </h3>
-                <p class="text-[0.8rem] text-slate-700">
-                  Please give
-                  <span class="font-semibold">
-                    &nbsp;direct, timely feedback
-                  </span>
-                  — for example, if I&apos;m moving too fast, missing a
-                  stakeholder, or something doesn&apos;t land well with your
-                  teams. I will do the same in return.
-                </p>
+              <article class="card-muted p-5 sm:p-6 flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-bold text-amber-700">04</div>
+                <div>
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">Real-time, two-way feedback</h3>
+                  <p class="text-[0.8rem] text-slate-700"><span class="font-semibold">Direct and timely</span> — if I'm moving too fast or missing something, tell me. I'll do the same.</p>
+                </div>
               </article>
             </div>
           </div>
         </section>
 
+
         <!-- Change & transformation alignment check -->
         <section
           id="change-alignment"
-          class="border-b border-slate-200/70 bg-white"
+          class="border-b border-slate-200/70 bg-gradient-to-b from-slate-50/50 to-white"
         >
           <div
             class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
           >
-            <div class="max-w-3xl animate-in" data-animate>
-              <p
-                class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500"
-              >
-                Change &amp; transformation
-              </p>
-              <h2
-                class="mb-3 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
-              >
-                Leadership scenario “alignment check”
-              </h2>
-              <p class="mb-2 text-sm text-slate-700 lg:prose-lg">
-                These short scenarios show how I approach transformation —
-                bringing together deep technology experience and practical
-                change leadership so complex shifts land cleanly in markets.
-              </p>
-              <p class="text-[0.8rem] text-slate-500">
-                There are no right answers here. Pick the option you&apos;d
-                naturally lean toward and see how I&apos;d typically respond.
-              </p>
+            <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+              <div class="max-w-2xl animate-in" data-animate>
+                <p class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  Change &amp; transformation
+                </p>
+                <h2 class="mb-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]">
+                  How aligned are we?
+                </h2>
+                <p class="text-sm text-slate-700 lg:prose-lg">
+                  5 real transformation scenarios. Pick how you'd naturally respond — then see if we think alike.
+                </p>
+              </div>
+
+              <div class="card-surface flex items-center gap-4 px-5 py-4 sm:min-w-[260px]" id="alignment-tracker">
+                <div class="flex-1">
+                  <div class="mb-1.5 flex items-baseline justify-between">
+                    <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Alignment</span>
+                    <span class="text-lg font-bold text-slate-900" id="alignment-score">0 / 5</span>
+                  </div>
+                  <div class="h-2.5 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-500 transition-all duration-500" id="alignment-bar" style="width: 0%"></div>
+                  </div>
+                  <p class="mt-2 text-[0.72rem] text-slate-500" id="alignment-message">Answer all 5 to see your result</p>
+                </div>
+              </div>
             </div>
 
-            <div
-              class="mt-8 grid gap-6 md:grid-cols-3 animate-stagger"
-              data-animate
-            >
-              <!-- Scenario 1 -->
-              <article
-                class="card-muted flex flex-col p-5 text-[0.8rem] text-slate-700 sm:p-6"
-                data-scenario="1"
-              >
-                <div class="mb-2 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-amber-600">
-                  Scenario 1
-                </div>
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Global platform change under pressure
-                </h3>
-                <p class="mb-3">
-                  We&apos;re under time pressure to roll out a major platform
-                  change globally. Some markets feel under-prepared.
-                </p>
-                <div class="mb-3 space-y-1.5">
-                  <button
-                    type="button"
-                    data-option="1a"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Push ahead globally and fix issues as they surface.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="1b"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Pause the rollout until all markets feel fully ready.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="1c"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Sequence markets deliberately, using data and pilots to
-                    protect restaurants.
-                  </button>
-                </div>
-                <div
-                  class="mt-auto rounded-md border border-dashed border-slate-200 bg-slate-50 px-3 py-2 text-[0.75rem]"
-                  data-explanations
-                >
-                  <div
-                    class="mb-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-500"
-                  >
-                    How I&apos;d typically respond
+            <div class="mt-8 space-y-4" id="scenario-container">
+              <!-- Scenario 1: Aligned = B -->
+              <article class="card-muted overflow-hidden transition-all duration-300" data-scenario="1" data-aligned="1b">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5 sm:p-6">
+                    <div class="mb-2 flex items-center gap-2">
+                      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">1</span>
+                      <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Rollout under pressure</span>
+                    </div>
+                    <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                      A critical deployment is running late. Leadership wants to accelerate.
+                    </h3>
+                    <p class="mb-4 text-[0.8rem] text-slate-600">
+                      We're behind on a major platform change. Execs are pushing for a faster global rollout, but data shows 3 markets have gaps in readiness.
+                    </p>
+                    <div class="grid gap-2 sm:grid-cols-3">
+                      <button type="button" data-option="1a" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Accelerate globally</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Ship now, handle issues reactively</span>
+                      </button>
+                      <button type="button" data-option="1b" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Sequence by risk</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Ready markets first, others follow with safeguards</span>
+                      </button>
+                      <button type="button" data-option="1c" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Full pause</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Wait until all markets are 100% ready</span>
+                      </button>
+                    </div>
                   </div>
-                  <p
-                    class=""
-                    data-explanation-for="1a"
-                  >
-                    I rarely take a &quot;ship and hope&quot; approach with
-                    transformational change. My technology background makes me
-                    wary of avoidable operational risk in restaurants.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="1b"
-                  >
-                    I value market readiness, but a full pause is usually a
-                    last resort. I&apos;d first look for sequencing and
-                    risk-based approaches that keep momentum while protecting
-                    restaurants.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="1c"
-                  >
-                    This is closest to my default. I use data, architecture
-                    understanding, and market insight to design a rollout path
-                    — pilots, guardrails, and clear exit criteria — so we move
-                    fast without being reckless.
-                  </p>
+                  <div class="hidden border-t border-slate-100 bg-slate-50 p-5 text-[0.78rem] text-slate-700 md:border-l md:border-t-0 md:w-72" data-feedback></div>
                 </div>
               </article>
 
-              <!-- Scenario 2 -->
-              <article
-                class="card-muted flex flex-col p-5 text-[0.8rem] text-slate-700 sm:p-6"
-                data-scenario="2"
-              >
-                <div class="mb-2 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-amber-600">
-                  Scenario 2
-                </div>
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Conflicting views on transformation scope
-                </h3>
-                <p class="mb-3">
-                  Tech, operations, and markets have different views on how
-                  ambitious a transformation should be.
-                </p>
-                <div class="mb-3 space-y-1.5">
-                  <button
-                    type="button"
-                    data-option="2a"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Back the boldest vision and push others to align.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="2b"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Narrow the scope to the smallest common denominator.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="2c"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Use structured discovery to frame options and trade-offs.
-                  </button>
-                </div>
-                <div
-                  class="mt-auto rounded-md border border-dashed border-slate-200 bg-slate-50 px-3 py-2 text-[0.75rem]"
-                  data-explanations
-                >
-                  <div
-                    class="mb-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-500"
-                  >
-                    How I&apos;d typically respond
+              <!-- Scenario 2: Aligned = A -->
+              <article class="card-muted overflow-hidden transition-all duration-300" data-scenario="2" data-aligned="2a">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5 sm:p-6">
+                    <div class="mb-2 flex items-center gap-2">
+                      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">2</span>
+                      <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Tech debt vs. features</span>
+                    </div>
+                    <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                      Business wants new capabilities, but tech debt is slowing us down.
+                    </h3>
+                    <p class="mb-4 text-[0.8rem] text-slate-600">
+                      The platform has accumulated significant tech debt. Business partners want features, but architects warn velocity will keep declining without foundational work.
+                    </p>
+                    <div class="grid gap-2 sm:grid-cols-3">
+                      <button type="button" data-option="2a" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Parallel tracks</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Negotiate capacity for both — features + foundations</span>
+                      </button>
+                      <button type="button" data-option="2b" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Features first</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Deliver what business needs; address debt later</span>
+                      </button>
+                      <button type="button" data-option="2c" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Full refactor</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Stop features until foundations are solid</span>
+                      </button>
+                    </div>
                   </div>
-                  <p
-                    class=""
-                    data-explanation-for="2a"
-                  >
-                    I like ambition, but I don&apos;t assume one function has
-                    the whole picture. In transformation work, I prefer to
-                    surface trade-offs explicitly before pushing for a path.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="2b"
-                  >
-                    I&apos;m cautious about designing to the lowest common
-                    denominator. That often underuses our technology and misses
-                    the step-change we&apos;re aiming for.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="2c"
-                  >
-                    This is closest to how I lead. I pull from my tech and
-                    product background to frame clear options, data, and impact
-                    so we can choose a direction that is both technically sound
-                    and operationally real.
-                  </p>
+                  <div class="hidden border-t border-slate-100 bg-slate-50 p-5 text-[0.78rem] text-slate-700 md:border-l md:border-t-0 md:w-72" data-feedback></div>
                 </div>
               </article>
 
-              <!-- Scenario 3 -->
-              <article
-                class="card-muted flex flex-col p-5 text-[0.8rem] text-slate-700 sm:p-6"
-                data-scenario="3"
-              >
-                <div class="mb-2 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-amber-600">
-                  Scenario 3
-                </div>
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Transformation fatigue in teams
-                </h3>
-                <p class="mb-3">
-                  Teams have been through multiple waves of change and are
-                  showing signs of fatigue.
-                </p>
-                <div class="mb-3 space-y-1.5">
-                  <button
-                    type="button"
-                    data-option="3a"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Push harder on delivery to &quot;get through it&quot;.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="3b"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Pause major initiatives until energy returns.
-                  </button>
-                  <button
-                    type="button"
-                    data-option="3c"
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-left text-[0.78rem] hover:border-amber-300 hover:bg-amber-50"
-                  >
-                    Reframe the change, simplify, and reset how we work.
-                  </button>
-                </div>
-                <div
-                  class="mt-auto rounded-md border border-dashed border-slate-200 bg-slate-50 px-3 py-2 text-[0.75rem]"
-                  data-explanations
-                >
-                  <div
-                    class="mb-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-500"
-                  >
-                    How I&apos;d typically respond
+              <!-- Scenario 3: Aligned = C -->
+              <article class="card-muted overflow-hidden transition-all duration-300" data-scenario="3" data-aligned="3c">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5 sm:p-6">
+                    <div class="mb-2 flex items-center gap-2">
+                      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">3</span>
+                      <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Transformation fatigue</span>
+                    </div>
+                    <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                      Teams are burnt out from constant change. Another big initiative is coming.
+                    </h3>
+                    <p class="mb-4 text-[0.8rem] text-slate-600">
+                      Your teams have been through 3 major changes in 18 months. Energy is low. Leadership just announced another transformation program starting next quarter.
+                    </p>
+                    <div class="grid gap-2 sm:grid-cols-3">
+                      <button type="button" data-option="3a" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Push through</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Rally the team — momentum will build energy</span>
+                      </button>
+                      <button type="button" data-option="3b" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Delay the program</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Push back until teams have recovered</span>
+                      </button>
+                      <button type="button" data-option="3c" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Reframe &amp; simplify</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Challenge scope, integrate with existing work</span>
+                      </button>
+                    </div>
                   </div>
-                  <p
-                    class=""
-                    data-explanation-for="3a"
-                  >
-                    I&apos;m careful not to treat people as a pure capacity
-                    problem. In transformation, sustained pace beats short,
-                    unsustainable sprints.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="3b"
-                  >
-                    Sometimes we do need to slow down, but I&apos;d first
-                    examine whether the portfolio, ways of working, or
-                    expectations are the real issue.
-                  </p>
-                  <p
-                    class="hidden"
-                    data-explanation-for="3c"
-                  >
-                    This is closest to my approach. I look at the end-to-end
-                    change portfolio, simplify where we can, and use both my
-                    tech and leadership experience to reset how we work so
-                    teams can deliver sustainably.
-                  </p>
+                  <div class="hidden border-t border-slate-100 bg-slate-50 p-5 text-[0.78rem] text-slate-700 md:border-l md:border-t-0 md:w-72" data-feedback></div>
                 </div>
               </article>
+
+              <!-- Scenario 4: Aligned = B -->
+              <article class="card-muted overflow-hidden transition-all duration-300" data-scenario="4" data-aligned="4b">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5 sm:p-6">
+                    <div class="mb-2 flex items-center gap-2">
+                      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">4</span>
+                      <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Stakeholder conflict</span>
+                    </div>
+                    <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                      Tech, Ops, and Markets disagree on how ambitious the change should be.
+                    </h3>
+                    <p class="mb-4 text-[0.8rem] text-slate-600">
+                      You're leading a cross-functional transformation. Tech wants a full platform rebuild, Ops wants minimal disruption, Markets want fast local wins. No consensus in sight.
+                    </p>
+                    <div class="grid gap-2 sm:grid-cols-3">
+                      <button type="button" data-option="4a" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Back the boldest view</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Pick the most ambitious path and drive alignment</span>
+                      </button>
+                      <button type="button" data-option="4b" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Frame trade-offs</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Build a structured options analysis with data</span>
+                      </button>
+                      <button type="button" data-option="4c" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Find middle ground</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Compromise to keep everyone somewhat happy</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hidden border-t border-slate-100 bg-slate-50 p-5 text-[0.78rem] text-slate-700 md:border-l md:border-t-0 md:w-72" data-feedback></div>
+                </div>
+              </article>
+
+              <!-- Scenario 5: Aligned = A -->
+              <article class="card-muted overflow-hidden transition-all duration-300" data-scenario="5" data-aligned="5a">
+                <div class="flex flex-col md:flex-row">
+                  <div class="flex-1 p-5 sm:p-6">
+                    <div class="mb-2 flex items-center gap-2">
+                      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">5</span>
+                      <span class="text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-500">Pilot gone wrong</span>
+                    </div>
+                    <h3 class="mb-2 text-sm font-semibold text-slate-900">
+                      A pilot failed in one market. Pressure to either kill it or expand anyway.
+                    </h3>
+                    <p class="mb-4 text-[0.8rem] text-slate-600">
+                      Your pilot had serious issues — low adoption, ops complaints. Some leaders want to cancel; others say "it's just one market" and want to proceed globally.
+                    </p>
+                    <div class="grid gap-2 sm:grid-cols-3">
+                      <button type="button" data-option="5a" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Root cause first</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Diagnose what failed before deciding next steps</span>
+                      </button>
+                      <button type="button" data-option="5b" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Expand anyway</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">One market isn't representative — scale will fix it</span>
+                      </button>
+                      <button type="button" data-option="5c" class="scenario-btn rounded-lg border-2 border-slate-200 bg-white px-3 py-3 text-left text-[0.78rem] transition hover:border-amber-300 hover:bg-amber-50/50">
+                        <span class="font-medium text-slate-800">Kill the program</span>
+                        <span class="mt-1 block text-[0.72rem] text-slate-500">Failure is a signal — cut losses and move on</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hidden border-t border-slate-100 bg-slate-50 p-5 text-[0.78rem] text-slate-700 md:border-l md:border-t-0 md:w-72" data-feedback></div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Results summary -->
+            <div class="mt-8 hidden rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6 sm:p-8" id="alignment-result">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900" id="result-title"></h3>
+                  <p class="mt-1 text-[0.85rem] text-slate-600" id="result-description"></p>
+                </div>
+                <button type="button" class="pill inline-flex items-center justify-center bg-slate-900 px-5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-slate-800" id="reset-scenarios">
+                  Try again
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -1012,7 +947,7 @@
                 Where partnership matters
               </p>
               <h2
-                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+                class="mb-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]"
               >
                 Where I need your partnership
               </h2>
@@ -1025,54 +960,30 @@
 
             <div class="grid gap-6 md:grid-cols-3 animate-stagger" data-animate>
               <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Slow, ownerless decisions
-                </h3>
-                <p class="mb-3 text-[0.8rem] text-slate-700">
-                  Long, circular discussions without clear owners, timelines, or
-                  criteria make it harder for me to be effective.
-                </p>
-                <p class="text-[0.75rem] text-slate-500">
-                  <span class="font-semibold text-slate-700">
-                    How you can help:
-                  </span>
-                  &nbsp;Propose an owner, a decision date, and a small set of
-                  options with trade-offs.
-                </p>
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 text-rose-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">Slow, ownerless decisions</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-700">Circular discussions without owners or timelines.</p>
+                <p class="rounded bg-slate-100 px-2 py-1.5 text-[0.75rem] text-slate-600"><span class="font-semibold">Help:</span> Propose owner + date + options with trade-offs.</p>
               </article>
 
               <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Debates without data
-                </h3>
-                <p class="mb-3 text-[0.8rem] text-slate-700">
-                  Opinion-heavy debates without data, guest impact, or real
-                  stakeholder voices are less energizing for me.
-                </p>
-                <p class="text-[0.75rem] text-slate-500">
-                  <span class="font-semibold text-slate-700">
-                    How you can help:
-                  </span>
-                  &nbsp;Pause to gather the right input, then come back with a
-                  sharper, evidence-based conversation.
-                </p>
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 text-rose-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                </div>
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">Debates without data</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-700">Opinion-heavy without evidence or real voices.</p>
+                <p class="rounded bg-slate-100 px-2 py-1.5 text-[0.75rem] text-slate-600"><span class="font-semibold">Help:</span> Gather input first, then come back sharper.</p>
               </article>
 
               <article class="card-muted p-5 sm:p-6">
-                <h3 class="mb-2 text-sm font-semibold text-slate-900">
-                  Work that is only political
-                </h3>
-                <p class="mb-3 text-[0.8rem] text-slate-700">
-                  Navigating politics is part of the job, but work that feels
-                  only political and not outcome-focused tends to drain me.
-                </p>
-                <p class="text-[0.75rem] text-slate-500">
-                  <span class="font-semibold text-slate-700">
-                    How you can help:
-                  </span>
-                  &nbsp;Partner on stakeholder mapping, coalition-building, and
-                  narratives that connect to real impact.
-                </p>
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 text-rose-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
+                <h3 class="mb-1.5 text-sm font-semibold text-slate-900">Work that's only political</h3>
+                <p class="mb-2 text-[0.8rem] text-slate-700">Politics without outcome focus drains energy.</p>
+                <p class="rounded bg-slate-100 px-2 py-1.5 text-[0.75rem] text-slate-600"><span class="font-semibold">Help:</span> Partner on narratives that connect to real impact.</p>
               </article>
             </div>
 
@@ -1096,7 +1007,7 @@
         <!-- Beyond work -->
         <section
           id="beyond-work"
-          class="border-b border-slate-200/70 bg-white"
+          class="border-b border-slate-200/70 bg-gradient-to-b from-slate-50/50 to-white"
         >
           <div
             class="container-page mx-auto w-full px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
@@ -1108,7 +1019,7 @@
                 Outside work
               </p>
               <h2
-                class="mb-4 text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.6rem]"
+                class="mb-4 text-2xl font-semibold tracking-tight text-slate-900 sm:text-[1.75rem] lg:text-[1.9rem]"
               >
                 A bit about me beyond work
               </h2>
@@ -1119,9 +1030,19 @@
               </p>
             </div>
 
-            <div class="grid gap-6 md:grid-cols-2 animate-stagger" data-animate>
-              <div class="space-y-4">
-                <article class="card-muted p-5 sm:p-6">
+            <div
+              class="grid gap-6 sm:grid-cols-2 animate-stagger"
+              data-animate
+            >
+              <!-- Row 1 -->
+              <article class="card-muted flex flex-col overflow-hidden">
+                <img
+                  src="assets/ludwig-training.png"
+                  alt="Ludwig training at the gym with heavy weights"
+                  class="h-40 w-full object-cover sm:h-48"
+                  style="object-position: center 80%"
+                />
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 class="mb-1 text-sm font-semibold text-slate-900">
                     Training &amp; coaching
                   </h3>
@@ -1130,28 +1051,19 @@
                     <span class="font-semibold">
                       &nbsp;personal trainer and nutritionist background
                     </span>
-                    . I enjoy structured progress — whether it&apos;s in the gym
-                    or in how teams grow.
+                    . I enjoy structured progress — whether it&apos;s in the
+                    gym or in how teams grow.
                   </p>
-                </article>
-                <article class="card-muted p-5 sm:p-6">
-                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
-                    Food &amp; cooking
-                  </h3>
-                  <p class="text-[0.8rem] text-slate-700">
-                    I&apos;m a
-                    <span class="font-semibold">
-                      &nbsp;foodie and home cook
-                    </span>
-                    , often experimenting in the kitchen. For me, food is both a
-                    creative outlet and a way to connect with people and
-                    cultures.
-                  </p>
-                </article>
-              </div>
+                </div>
+              </article>
 
-              <div class="space-y-4">
-                <article class="card-muted p-5 sm:p-6">
+              <article class="card-muted flex flex-col overflow-hidden">
+                <img
+                  src="assets/travel-vietnam.png"
+                  alt="Walking through lotus ponds in Vietnam"
+                  class="h-40 w-full object-cover object-center sm:h-48"
+                />
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 class="mb-1 text-sm font-semibold text-slate-900">
                     Travel
                   </h3>
@@ -1167,21 +1079,53 @@
                     . New places, food, and conversations help me reset
                     perspective and bring back fresh ideas.
                   </p>
-                </article>
-                <article class="card-muted p-5 sm:p-6">
+                </div>
+              </article>
+
+              <!-- Row 2 -->
+              <article class="card-muted flex flex-col overflow-hidden">
+                <img
+                  src="assets/ludwig-cooking.png"
+                  alt="Ludwig at a cooking class in Thailand"
+                  class="h-40 w-full object-cover object-center sm:h-48"
+                />
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 class="mb-1 text-sm font-semibold text-slate-900">
+                    Food &amp; cooking
+                  </h3>
+                  <p class="text-[0.8rem] text-slate-700">
+                    I&apos;m a
+                    <span class="font-semibold">
+                      &nbsp;foodie and home cook
+                    </span>
+                    , often experimenting in the kitchen. For me, food is both
+                    a creative outlet and a way to connect with people and
+                    cultures.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card-muted flex flex-col overflow-hidden">
+                <img
+                  src="assets/ludwig-ai-demo.png"
+                  alt="Ludwig presenting AI applications at a McDonald's technology showcase"
+                  class="h-40 w-full object-cover object-center sm:h-48"
+                />
+                <div class="flex flex-1 flex-col p-5 sm:p-6">
                   <h3 class="mb-1 text-sm font-semibold text-slate-900">
                     Building with AI
                   </h3>
                   <p class="text-[0.8rem] text-slate-700">
                     I used to be heavily into gaming — these days my
                     <span class="font-semibold">
-                      &nbsp;creative outlet is building new applications with AI
+                      &nbsp;creative outlet is building new applications with
+                      AI
                     </span>
                     . It keeps me close to technology while experimenting with
                     new ways of working.
                   </p>
-                </article>
-              </div>
+                </div>
+              </article>
             </div>
 
             <div
@@ -1219,7 +1163,7 @@
           class="container-page mx-auto flex w-full flex-col items-start justify-between gap-3 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8"
         >
           <p>
-            Ludwig Wullner &middot; Leadership introduction for
+            Ludwig Wullner &middot; introduction for
             McDonald&apos;s colleagues and partners.
           </p>
           <p class="text-[0.7rem]">
@@ -1230,6 +1174,7 @@
           </p>
         </div>
       </footer>
+    </div>
     </div>
 
     <script>
@@ -1310,45 +1255,151 @@
           });
         }
 
-        // Scenario alignment check interactions
+        // Gamified scenario alignment check
+        const scenarioFeedback = {
+          "1a": { aligned: false, text: "I rarely take a 'ship and hope' approach. My technology background makes me wary of avoidable operational risk in restaurants." },
+          "1b": { aligned: true, text: "Exactly my approach! I use data, architecture understanding, and market insight to design a rollout path — pilots, guardrails, and clear exit criteria — so we move fast without being reckless." },
+          "1c": { aligned: false, text: "I value market readiness, but a full pause is usually a last resort. I'd first look for sequencing and risk-based approaches that keep momentum while protecting restaurants." },
+          "2a": { aligned: true, text: "This is how I operate. I negotiate for parallel tracks that serve both business needs and platform health — building coalitions around 'both/and' solutions." },
+          "2b": { aligned: false, text: "Features-only thinking is a trap. It creates a debt spiral that eventually slows everything. I push for sustainable approaches." },
+          "2c": { aligned: false, text: "A full stop on features rarely works politically or operationally. I prefer to negotiate protected capacity for foundations while keeping momentum." },
+          "3a": { aligned: false, text: "I'm careful not to treat people as a pure capacity problem. In transformation, sustained pace beats short, unsustainable sprints." },
+          "3b": { aligned: false, text: "Sometimes we do need to slow down, but I'd first examine whether the portfolio, ways of working, or expectations are the real issue." },
+          "3c": { aligned: true, text: "This is my approach. I look at the end-to-end change portfolio, simplify where we can, and use both my tech and leadership experience to reset how we work so teams can deliver sustainably." },
+          "4a": { aligned: false, text: "I like ambition, but I don't assume one function has the whole picture. In transformation work, I prefer to surface trade-offs explicitly before pushing for a path." },
+          "4b": { aligned: true, text: "This is closest to how I lead. I pull from my tech and product background to frame clear options, data, and impact so we can choose a direction that is both technically sound and operationally real." },
+          "4c": { aligned: false, text: "I'm cautious about designing to the lowest common denominator. That often underuses our technology and misses the step-change we're aiming for." },
+          "5a": { aligned: true, text: "Exactly right. My tech background gives me a strong instinct for root cause analysis. I don't kill programs prematurely, but I also don't ignore signals — I investigate." },
+          "5b": { aligned: false, text: "Ignoring pilot data is a common mistake. 'Scale will fix it' rarely holds — the same issues usually surface everywhere. I prefer to understand before expanding." },
+          "5c": { aligned: false, text: "Killing too quickly wastes learning. I'd rather diagnose what went wrong, adapt the approach, and test again before making a final call." }
+        };
+
         const scenarioCards = document.querySelectorAll("[data-scenario]");
+        const alignmentScore = document.getElementById("alignment-score");
+        const alignmentBar = document.getElementById("alignment-bar");
+        const alignmentMessage = document.getElementById("alignment-message");
+        const alignmentResult = document.getElementById("alignment-result");
+        const resultTitle = document.getElementById("result-title");
+        const resultDescription = document.getElementById("result-description");
+        const resetBtn = document.getElementById("reset-scenarios");
+
+        let answered = 0;
+        let matches = 0;
+
+        function updateTracker() {
+          alignmentScore.textContent = matches + " / 5";
+          alignmentBar.style.width = (matches / 5 * 100) + "%";
+          
+          if (answered < 5) {
+            alignmentMessage.textContent = (5 - answered) + " scenario" + (answered === 4 ? "" : "s") + " remaining";
+          } else {
+            showResult();
+          }
+        }
+
+        function showResult() {
+          alignmentResult.classList.remove("hidden");
+          
+          if (matches === 5) {
+            resultTitle.textContent = "Perfect alignment!";
+            resultDescription.textContent = "We think alike on transformation. Working together should feel natural.";
+          } else if (matches >= 3) {
+            resultTitle.textContent = "Strong alignment (" + matches + "/5)";
+            resultDescription.textContent = "We share key instincts. Where we differ, we'll likely complement each other well.";
+          } else if (matches >= 1) {
+            resultTitle.textContent = "Some alignment (" + matches + "/5)";
+            resultDescription.textContent = "We have different default approaches — which can be powerful if we stay curious about each other's perspectives.";
+          } else {
+            resultTitle.textContent = "Different playbooks";
+            resultDescription.textContent = "We naturally approach transformation differently. That's not bad — it means we can challenge each other's thinking.";
+          }
+          
+          alignmentResult.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+        function resetScenarios() {
+          answered = 0;
+          matches = 0;
+          alignmentScore.textContent = "0 / 5";
+          alignmentBar.style.width = "0%";
+          alignmentMessage.textContent = "Answer all 5 to see your result";
+          alignmentResult.classList.add("hidden");
+          
+          scenarioCards.forEach((card) => {
+            const buttons = card.querySelectorAll("button[data-option]");
+            const feedback = card.querySelector("[data-feedback]");
+            
+            buttons.forEach((b) => {
+              b.classList.remove("border-emerald-400", "bg-emerald-50", "border-slate-300", "bg-slate-50", "opacity-60");
+              b.classList.add("border-slate-200", "bg-white");
+              b.disabled = false;
+            });
+            
+            feedback.classList.add("hidden");
+            feedback.innerHTML = "";
+            card.classList.remove("ring-2", "ring-emerald-200", "ring-slate-200");
+          });
+        }
+
         scenarioCards.forEach((card) => {
           const buttons = card.querySelectorAll("button[data-option]");
-          const explanationsContainer = card.querySelector("[data-explanations]");
-          const explanations =
-            explanationsContainer?.querySelectorAll("[data-explanation-for]") ||
-            [];
+          const alignedOption = card.getAttribute("data-aligned");
+          const feedback = card.querySelector("[data-feedback]");
 
           buttons.forEach((btn) => {
             btn.addEventListener("click", () => {
+              if (btn.disabled) return;
+              
               const option = btn.getAttribute("data-option");
-              // Visual selection
-              buttons.forEach((b) => {
-                b.classList.remove(
-                  "border-amber-400",
-                  "bg-amber-50/70",
-                  "ring-1",
-                  "ring-amber-200"
-                );
-              });
-              btn.classList.add(
-                "border-amber-400",
-                "bg-amber-50/70",
-                "ring-1",
-                "ring-amber-200"
-              );
+              const data = scenarioFeedback[option];
+              const isMatch = data.aligned;
+              
+              answered++;
+              if (isMatch) matches++;
 
-              // Explanation selection
-              explanations.forEach((exp) => {
-                if (exp.getAttribute("data-explanation-for") === option) {
-                  exp.classList.remove("hidden");
+              // Disable all buttons in this scenario
+              buttons.forEach((b) => {
+                b.disabled = true;
+                const bOption = b.getAttribute("data-option");
+                const bData = scenarioFeedback[bOption];
+                
+                if (b === btn) {
+                  // Selected button
+                  if (isMatch) {
+                    b.classList.remove("border-slate-200", "bg-white");
+                    b.classList.add("border-emerald-400", "bg-emerald-50");
+                  } else {
+                    b.classList.remove("border-slate-200", "bg-white");
+                    b.classList.add("border-slate-300", "bg-slate-50");
+                  }
                 } else {
-                  exp.classList.add("hidden");
+                  b.classList.add("opacity-60");
                 }
               });
+
+              // Show feedback
+              const icon = isMatch 
+                ? '<svg class="h-4 w-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>'
+                : '<svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01"></path></svg>';
+              
+              feedback.innerHTML = '<div class="mb-2 flex items-center gap-2">' + icon + '<span class="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-slate-500">' + (isMatch ? "We think alike!" : "Different approach") + '</span></div><p>' + data.text + '</p>';
+              feedback.classList.remove("hidden");
+
+              // Add ring to card
+              if (isMatch) {
+                card.classList.add("ring-2", "ring-emerald-200");
+              } else {
+                card.classList.add("ring-2", "ring-slate-200");
+              }
+
+              updateTracker();
             });
           });
         });
+
+        if (resetBtn) {
+          resetBtn.addEventListener("click", resetScenarios);
+        }
       })();
     </script>
   </body>
